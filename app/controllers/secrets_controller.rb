@@ -1,8 +1,7 @@
 class SecretsController < ApplicationController
-    before_action
-    
+    before_action :require_logged_in
+  
     def show
-        return redirect_to(controller: 'sessions', action: 'new') if current_user == nil
     end
 
 end
